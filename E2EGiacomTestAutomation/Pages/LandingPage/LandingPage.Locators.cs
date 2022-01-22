@@ -4,7 +4,7 @@
 
     public partial class LandingPage
     {
-        public By LogoutButton => By.LinkText("/logout");
+        public By LogoutButton => By.PartialLinkText("Logout");
         public By LoggedInConfirmationMessage => By.Id("flash");
 
     }
