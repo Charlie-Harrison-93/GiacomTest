@@ -85,7 +85,7 @@
 
         private static Dictionary<Pages, Uri> GetPagesFromConfig()
         {
-            Pages baseURI = Enums.Pages.Dashboard;
+            Pages baseURI = Enums.Pages.Domain;
             var completePagesDictionary = new Dictionary<Pages, Uri>();
             Dictionary<Pages, string> rawPagesDictionary = TestConfigurationSection.SectionDetails.Pages.OfType<PageConfiguration>()
                 .ToDictionary(page => page.Name, page => page.Path);

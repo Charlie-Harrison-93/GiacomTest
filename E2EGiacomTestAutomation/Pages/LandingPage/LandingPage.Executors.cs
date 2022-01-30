@@ -16,5 +16,15 @@
         {
             this.LogoutButton.ClickWithWait();
         }
+
+        public void ClickTheJavaScriptAlertsLink()
+        {
+            this.JavaScriptAlertsLink.ClickWithWait();
+        }
+
+        public void ClickTheCheckboxesLink()
+        {
+            this.CheckboxesLink.ClickWithWait();
+        }
     }
 }

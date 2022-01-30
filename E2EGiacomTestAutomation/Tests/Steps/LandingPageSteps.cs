@@ -1,13 +1,6 @@
 ﻿namespace E2EGiacomTestAutomation.Tests.Steps
 {
-    using FluentAssertions;
-    using Pages.LoginPage;
-    using E2EGiacomTestAutomation.Utilities.Extensions;
     using TechTalk.SpecFlow;
-    using Utilities;
-    using Utilities.Helpers.TestDataGenerator;
-    using Utilities.Enums;
-    using E2EGiacomTestAutomation.Pages.CommonPage;
     using E2EGiacomTestAutomation.Pages.LandingPage;
 
     [Binding]
@@ -19,6 +12,18 @@
         public void WhenIClickTheLogoutButton()
         {
             this.landingPage.LogOut();
+        }
+
+        [Given(@"I have clicked the JavaScript Alerts link")]
+        public void IHaveClickedTheJavaScriptAlertsLink()
+        {
+            this.landingPage.ClickTheJavaScriptAlertsLink();
+        }
+
+        [Given(@"I have clicked the Checkboxes link")]
+        public void IHaveClickedTheCheckboxesLink()
+        {
+            this.landingPage.ClickTheCheckboxesLink();
         }
     }
 }

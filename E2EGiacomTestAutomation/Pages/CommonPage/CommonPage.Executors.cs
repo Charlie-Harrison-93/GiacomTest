@@ -28,5 +28,21 @@
         {
             SeleniumExecutor.Driver.Url = url;
         }
+
+        public void AcceptJavaScriptAlert()
+        {
+            Browser.SwitchToAlert().Accept();
+        }
+
+        public void DismissJavaScriptAlert()
+        {
+            Browser.SwitchToAlert().Dismiss();
+        }
+
+        public void SendKeysToJavaScriptPrompt(string text)
+        {
+            Browser.SwitchToAlert().SendKeys(text);
+        }
+
     }
 }

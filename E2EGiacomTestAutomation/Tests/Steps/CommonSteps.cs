@@ -11,6 +11,30 @@
     {
         private CommonPage commonPage = new CommonPage();
 
+        [When(@"I click the 'OK' button on the JavaScript Alert")]
+        public void IClickTheOKButtonOnTheJavaScriptAlert()
+        {
+            this.commonPage.AcceptJavaScriptAlert();
+        }
+
+        [When(@"I click the 'Cancel' button on the JavaScript Alert")]
+        public void IClickTheCancelButtonOnTheJavaScriptAlert()
+        {
+            this.commonPage.DismissJavaScriptAlert();
+        }
+
+        [When(@"I send the text '(.*)' to the JavaScript Prompt")]
+        public void ISendTheTextOnTheJavaScriptAlert(string text)
+        {
+            this.commonPage.SendKeysToJavaScriptPrompt(text);
+        }
+
+        [When(@"I refresh the page")]
+        public void WhenIRefreshThePage()
+        {
+            Browser.RefreshPage();
+        }
+
         [Then(@"I can see expected page ""(.*)""")]
         public void ThenICanSeeExpectedPage(string pageTitle)
         {

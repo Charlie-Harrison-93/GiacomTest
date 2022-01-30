@@ -23,9 +23,10 @@
         [Given(@"I open The Internet page")]
         public void GivenIOpenLoginPage()
         {
-            Browser.GoTo(Pages.Dashboard);
+            Browser.GoTo(Pages.Domain);
         }
 
+        [Given(@"I have entered valid login credentials")]
         [When(@"I enter valid login credentials")]
         public void ThenIEnterValidLoginCredentials()
         {
